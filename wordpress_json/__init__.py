@@ -221,6 +221,10 @@ class WordpressJsonWrapper(object):
         endpoints = method_name.split('_')[1:]
         ids = self._get_ids(**kw)
         endpoint = self._build_endpoint(endpoints, ids)
+        headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                      "(KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36"
+        }
 
         # filters
         url_params = dict()
@@ -239,7 +243,6 @@ class WordpressJsonWrapper(object):
             post_data = kw.get('data')
 
         # headers
-        headers = dict()
         if kw.get('headers'):
             headers = kw.get('headers')
 

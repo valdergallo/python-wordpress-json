@@ -3,6 +3,26 @@
 Release History
 ---------------
 
+0.3.1 (2017-02-22)
+++++++++++++++++++
+
+**Documentation**
+
+- Fix changelog
+
+0.3.0 (2017-02-22)
+++++++++++++++++++
+
+**New Features**
+
+- Support non-JSON data in requests
+
+**Behavioural Changes**
+
+- Use POST instead of PUT for update requests. This may not work with Wordpress
+  versions below 4.7.
+- Raise an error if the Content-Type on response is not JSON.
+
 0.2.4 (2016-08-17)
 ++++++++++++++++++
 
